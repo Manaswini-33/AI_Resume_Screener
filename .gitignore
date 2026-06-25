@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Custom rules for AI Resume Screener Data
+data/resumes/*
+data/job_descriptions/*
+!data/resumes/.gitkeep
+!data/job_descriptions/.gitkeep
