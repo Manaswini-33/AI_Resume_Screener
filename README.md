@@ -1,1 +1,1 @@
-# AI_Resumr_Screener
+# AI_Resume_Screener
