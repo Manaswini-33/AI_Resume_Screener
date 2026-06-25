@@ -22,17 +22,17 @@ An enterprise-grade, privacy-aware AI tool designed to parse unstructured resume
 
 ## 🎯 2. Detailed Project Objectives
 
-* **Architect Structural Layout-Aware Parsing:** To design and deploy an advanced document-processing layer that bypasses string-flattening limits. This layer must achieve 100% text-hierarchy reading order integrity by using visual element coordinate tracking, treating every resume as a graphical canvas rather than an unformatted text document.
-* **Establish High-Dimensional Semantic Evaluation:** To move completely away from token-frequency metrics and implement contextual semantic analysis. The platform must map resumes and job requirements into a unified vector space, ensuring the system intelligently connects identical abstract concepts (such as correlating "distributed infrastructure" with "cloud microservices") regardless of specific variations in phrasing.
-* **Enforce Blind Screening Protocols:** To programmatically guarantee data neutrality by embedding an automated, deterministic sanitization pipeline at the edge of the system. This gatekeeper mechanism must completely scrub all identifying data fields before the text hits the inference engine, ensuring that candidate evaluations are strictly based on skills and experience.
-* **Deliver a High-Performance HR Operations Dashboard:** To construct an interactive, low-latency web portal engineered specifically for recruitment professionals. The frontend must abstract the underlying complex NLP models into a clean layout, providing non-technical personnel with granular slider controls to adjust match thresholds and view color-coded applicant leaderboards in real time.
+* **Architect Structural Layout-Aware Parsing:**  To design and deploy an advanced document-processing layer that bypasses string-flattening limits. This layer must achieve 100% text-hierarchy reading order integrity by using visual element coordinate tracking, treating every resume as a graphical canvas rather than an unformatted text document.
+* **Establish High-Dimensional Semantic Evaluation:**  To move completely away from token-frequency metrics and implement contextual semantic analysis. The platform must map resumes and job requirements into a unified vector space, ensuring the system intelligently connects identical abstract concepts (such as correlating "distributed infrastructure" with "cloud microservices") regardless of specific variations in phrasing.
+* **Enforce Blind Screening Protocols:**  To programmatically guarantee data neutrality by embedding an automated, deterministic sanitization pipeline at the edge of the system. This gatekeeper mechanism must completely scrub all identifying data fields before the text hits the inference engine, ensuring that candidate evaluations are strictly based on skills and experience.
+* **Deliver a High-Performance HR Operations Dashboard:**  To construct an interactive, low-latency web portal engineered specifically for recruitment professionals. The frontend must abstract the underlying complex NLP models into a clean layout, providing non-technical personnel with granular slider controls to adjust match thresholds and view color-coded applicant leaderboards in real time.
 
 ---
 
 ## 💡 3. Deep Dive Technical Solution & Pipeline Architecture
 
 The platform architecture is built as a highly decoupled, three-tier NLP engineering pipeline. It transforms raw, unvetted PDF files into clean mathematical structures for precise comparison:
-
+```text
 [ RAW CANDIDATE RESUMES ]
                                │
                                ▼
@@ -61,7 +61,7 @@ The platform architecture is built as a highly decoupled, three-tier NLP enginee
                                │
                                ▼
                  [ STREAMLIT RANKING DASHBOARD ]
-
+```
 ### 1. Ingestion & Layout Isolation Layer
 Instead of treating incoming PDFs as lines of text, this layer uses structural coordinate evaluation via `pdfplumber`. It isolates the layout boundaries of the document by mapping words to exact pixel coordinates on the page grid. The system runs grouping heuristics to detect distinct columns and sidebars. It processes each text column vertically and isolated before stitching the pieces together, ensuring multi-column layouts are parsed exactly how a human reads them.
 
@@ -122,9 +122,9 @@ The system computes the exact directional angle between the Candidate Resume Vec
 git clone [https://github.com/your_github_username/ai-resume-screener.git](https://github.com/your_github_username/ai-resume-screener.git)
 cd ai-resume-screener
 ```
-###Step 2: Install Dependencies
+Step 2: Install Dependencies
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 
-###Step 3: Run the Application
+Step 3: Run the Application
 streamlit run app.py
