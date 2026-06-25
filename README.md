@@ -22,10 +22,14 @@ An enterprise-grade, privacy-aware AI tool designed to parse unstructured resume
 
 ## 🎯 2. Detailed Project Objectives
 
-* **Architect Structural Layout-Aware Parsing:**  To design and deploy an advanced document-processing layer that bypasses string-flattening limits. This layer must achieve 100% text-hierarchy reading order integrity by using visual element coordinate tracking, treating every resume as a graphical canvas rather than an unformatted text document.
-* **Establish High-Dimensional Semantic Evaluation:**  To move completely away from token-frequency metrics and implement contextual semantic analysis. The platform must map resumes and job requirements into a unified vector space, ensuring the system intelligently connects identical abstract concepts (such as correlating "distributed infrastructure" with "cloud microservices") regardless of specific variations in phrasing.
-* **Enforce Blind Screening Protocols:**  To programmatically guarantee data neutrality by embedding an automated, deterministic sanitization pipeline at the edge of the system. This gatekeeper mechanism must completely scrub all identifying data fields before the text hits the inference engine, ensuring that candidate evaluations are strictly based on skills and experience.
-* **Deliver a High-Performance HR Operations Dashboard:**  To construct an interactive, low-latency web portal engineered specifically for recruitment professionals. The frontend must abstract the underlying complex NLP models into a clean layout, providing non-technical personnel with granular slider controls to adjust match thresholds and view color-coded applicant leaderboards in real time.
+### a.) Architect Structural Layout-Aware Parsing:
+*   To design and deploy an advanced document-processing layer that bypasses string-flattening limits. This layer must achieve 100% text-hierarchy reading order integrity by using visual element coordinate tracking, treating every resume as a graphical canvas rather than an unformatted text document.
+### b.) Establish High-Dimensional Semantic Evaluation:
+*  To move completely away from token-frequency metrics and implement contextual semantic analysis. The platform must map resumes and job requirements into a unified vector space, ensuring the system intelligently connects identical abstract concepts (such as correlating "distributed infrastructure" with "cloud microservices") regardless of specific variations in phrasing.
+### c.) Enforce Blind Screening Protocols:
+*  To programmatically guarantee data neutrality by embedding an automated, deterministic sanitization pipeline at the edge of the system. This gatekeeper mechanism must completely scrub all identifying data fields before the text hits the inference engine, ensuring that candidate evaluations are strictly based on skills and experience.
+### d.) Deliver a High-Performance HR Operations Dashboard:   
+*  To construct an interactive, low-latency web portal engineered specifically for recruitment professionals. The frontend must abstract the underlying complex NLP models into a clean layout, providing non-technical personnel with granular slider controls to adjust match thresholds and view color-coded applicant leaderboards in real time.
 
 ---
 
