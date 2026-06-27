@@ -1,8 +1,13 @@
 import spacy
-# Import the model directly as a python package
-import en_core_web_sm
+from spacy.cli import download
 
 class ResumeMatcher:
     def __init__(self):
-        # Load the directly imported model layout
-        self.nlp = en_core_web_sm.load()
+        try:
+            # Try to load the model normally
+            self.nlp = spacy.load("en_core_web_sm")
+        except OSError:
+            # If not found, use SpaCy's official downloader package to grab it safely
+            print("Model 'en_core_web_sm' not found. Downloading via SpaCy CLI...")
+            download("en_core_web_sm")
+            self.nlp = spacy.load("en_core_web_sm")
