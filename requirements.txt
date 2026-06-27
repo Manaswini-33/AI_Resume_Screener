@@ -1,4 +1,6 @@
 pdfplumber
+torch
+torchvision
 sentence-transformers
 pandas
 scikit-learn
