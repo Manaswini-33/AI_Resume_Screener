@@ -1,29 +1,34 @@
-import os
-import sys
-import spacy
+import re
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
 class ResumeMatcher:
     def __init__(self):
-        # Define a local path inside your project directory that you have permissions to write to
-        local_target_dir = os.path.join(os.getcwd(), "local_models")
-        
-        # Add the local directory to the Python system path so it can see installed modules
-        if local_target_dir not in sys.path:
-            sys.path.append(local_target_dir)
+        # Initialize the deep learning transformer model directly
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
 
-        try:
-            # Try loading the model from the system or local path
-            self.nlp = spacy.load("en_core_web_sm")
-        except OSError:
-            print("Model 'en_core_web_sm' not found. Installing into local directory...")
-            
-            # Programmatically trigger pip to install the model inside your local writable directory
-            import subprocess
-            subprocess.check_call([
-                sys.executable, "-m", "pip", "install", 
-                "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz",
-                "--target", local_target_dir
-            ])
-            
-            # Load the model directly from the specific local directory package
-            self.nlp = spacy.load("en_core_web_sm")
+    def clean_text(self, text):
+        """
+        Lightweight, lightning-fast text processing using regex.
+        Removes special characters, extra whitespace, and normalizes text.
+        """
+        text = text.lower()
+        text = re.sub(r'\s+', ' ', text)  # Collapse extra spaces/newlines
+        return text.strip()
+
+    def calculate_similarity(self, resume_text, jd_text):
+        """
+        Computes the contextual match score using mathematical cosine similarity.
+        """
+        cleaned_resume = self.clean_text(resume_text)
+        cleaned_jd = self.clean_text(jd_text)
+
+        # Generate dense vector embeddings (384 dimensions)
+        embeddings = self.model.encode([cleaned_resume, cleaned_jd])
+
+        # Compute cosine similarity between candidate and job description
+        similarity_matrix = cosine_similarity([embeddings[0]], [embeddings[1]])
+        
+        # Convert the raw score to a clean, rounded percentage
+        match_percentage = float(similarity_matrix[0][0]) * 100
+        return round(match_percentage, 2)
