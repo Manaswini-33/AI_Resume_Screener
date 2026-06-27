@@ -2,6 +2,7 @@ pdfplumber
 torch
 torchvision
 sentence-transformers
+matplotlib
 pandas
 scikit-learn
 streamlit
