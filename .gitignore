@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+venv/
+ENV/
+.pytest_cache/
+.streamlit/secrets.toml
+models/*.pkl
+!models/ranking_model.pkl

@@ -1,0 +1,60 @@
+{
+    "model_type": "XGBoost Classifier",
+    "benchmark_model": "Random Forest Classifier",
+    "training_samples": 640,
+    "test_samples": 160,
+    "features": [
+        "semantic_similarity",
+        "experience_semantic_match",
+        "project_semantic_match",
+        "skill_match_ratio",
+        "required_skill_match",
+        "preferred_skill_match",
+        "evidence_strength",
+        "evidence_coverage",
+        "tfidf_similarity",
+        "unique_word_ratio",
+        "repetition_ratio",
+        "keyword_density",
+        "extraction_quality"
+    ],
+    "feature_importances": {
+        "semantic_similarity": 0.2663803994655609,
+        "experience_semantic_match": 0.10688970237970352,
+        "project_semantic_match": 0.07011586427688599,
+        "skill_match_ratio": 0.07347516715526581,
+        "required_skill_match": 0.05965400114655495,
+        "preferred_skill_match": 0.0433344803750515,
+        "evidence_strength": 0.05772586911916733,
+        "evidence_coverage": 0.06046534329652786,
+        "tfidf_similarity": 0.024538855999708176,
+        "unique_word_ratio": 0.07349690049886703,
+        "repetition_ratio": 0.06009170040488243,
+        "keyword_density": 0.07115635275840759,
+        "extraction_quality": 0.032675400376319885
+    },
+    "metrics": {
+        "Accuracy": 0.94375,
+        "Precision": 0.9347826086956522,
+        "Recall": 0.9662921348314607,
+        "F1": 0.9502762430939227,
+        "ROC-AUC": 0.9873397689507833
+    },
+    "benchmark_metrics": {
+        "Accuracy": 0.9125,
+        "Precision": 0.8947368421052632,
+        "Recall": 0.9550561797752809,
+        "F1": 0.9239130434782609
+    },
+    "confusion_matrix": [
+        [
+            65,
+            6
+        ],
+        [
+            3,
+            86
+        ]
+    ],
+    "data_note": "Dataset constructed with 13 multi-factor signals (semantic, skill match, evidence level, density penalties)."
+}

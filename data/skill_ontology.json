@@ -1,0 +1,92 @@
+{
+  "python": {
+    "canonical": "Python",
+    "aliases": ["py", "python3", "python 3", "py3"],
+    "category": "Programming Languages",
+    "related": ["django", "flask", "fastapi", "pandas", "numpy", "scikit-learn", "pytorch"]
+  },
+  "machine_learning": {
+    "canonical": "Machine Learning",
+    "aliases": ["ml", "predictive modeling", "statistical learning", "machine-learning"],
+    "category": "AI & Data Science",
+    "related": ["scikit-learn", "xgboost", "random forest", "logistic regression", "deep learning"]
+  },
+  "natural_language_processing": {
+    "canonical": "Natural Language Processing",
+    "aliases": ["nlp", "text analytics", "text mining", "text processing"],
+    "category": "AI & Data Science",
+    "related": ["spacy", "nltk", "transformers", "bert", "sentence-transformers"]
+  },
+  "deep_learning": {
+    "canonical": "Deep Learning",
+    "aliases": ["dl", "neural networks", "deep-learning"],
+    "category": "AI & Data Science",
+    "related": ["tensorflow", "pytorch", "keras", "cnn", "rnn", "transformers"]
+  },
+  "sql": {
+    "canonical": "SQL",
+    "aliases": ["structured query language", "mysql", "postgresql", "postgres", "sqlite", "mssql", "tsql"],
+    "category": "Databases & Storage",
+    "related": ["database design", "query optimization", "nosql", "mongodb"]
+  },
+  "aws": {
+    "canonical": "AWS",
+    "aliases": ["amazon web services", "ec2", "s3", "lambda", "rds", "cloudwatch"],
+    "category": "Cloud & Infrastructure",
+    "related": ["cloud computing", "docker", "kubernetes", "devops"]
+  },
+  "docker": {
+    "canonical": "Docker",
+    "aliases": ["containerization", "containers", "docker-compose"],
+    "category": "Cloud & Infrastructure",
+    "related": ["kubernetes", "devops", "ci/cd"]
+  },
+  "kubernetes": {
+    "canonical": "Kubernetes",
+    "aliases": ["k8s", "kube"],
+    "category": "Cloud & Infrastructure",
+    "related": ["docker", "helm", "devops"]
+  },
+  "xgboost": {
+    "canonical": "XGBoost",
+    "aliases": ["extreme gradient boosting", "xgb"],
+    "category": "AI & Data Science",
+    "related": ["gradient boosting", "random forest", "machine learning"]
+  },
+  "pandas": {
+    "canonical": "Pandas",
+    "aliases": ["pd", "py-pandas"],
+    "category": "Data Engineering & Analytics",
+    "related": ["numpy", "python", "data manipulation"]
+  },
+  "scikit_learn": {
+    "canonical": "Scikit-Learn",
+    "aliases": ["sklearn", "scikit learn"],
+    "category": "AI & Data Science",
+    "related": ["machine learning", "python"]
+  },
+  "tensorflow": {
+    "canonical": "TensorFlow",
+    "aliases": ["tf"],
+    "category": "AI & Data Science",
+    "related": ["keras", "deep learning", "python"]
+  },
+  "pytorch": {
+    "canonical": "PyTorch",
+    "aliases": ["torch"],
+    "category": "AI & Data Science",
+    "related": ["deep learning", "python"]
+  },
+  "git": {
+    "canonical": "Git",
+    "aliases": ["github", "gitlab", "version control", "bitbucket"],
+    "category": "Developer Tools",
+    "related": ["ci/cd", "devops"]
+  },
+  "rest_api": {
+    "canonical": "REST API",
+    "aliases": ["restful api", "rest apis", "web services", "fastapi", "flask"],
+    "category": "Software Architecture",
+    "related": ["json", "http", "backend"]
+  }
+}
